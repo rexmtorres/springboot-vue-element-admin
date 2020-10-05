@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 /**
  * @author lihaoyang
@@ -41,4 +42,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Modifying(clearAutomatically = true)
     @Query("update User set role=null where role.id=:roleId")
     void updateUserRoleNull(Long roleId);
+
+    @Query("select u from User u order by u.nickname")
+    List<User> getAllUsersRaw();
 }
