@@ -43,6 +43,16 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("update User set role=null where role.id=:roleId")
     void updateUserRoleNull(Long roleId);
 
+    //region Rex
+
     @Query("select u from User u order by u.nickname")
     List<User> getAllUsersRaw();
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query("update User set role=(select r from Role r where r.id=:newRoleId) where id=:userId")
+    void changeUserRole(Long userId, Long newRoleId);
+
+    //endregion Rex
+
 }
