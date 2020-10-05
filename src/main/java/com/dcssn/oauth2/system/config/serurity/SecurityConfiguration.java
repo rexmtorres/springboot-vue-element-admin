@@ -27,7 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     //private static final String[] permitAll = {"/oauth/**", "/verify-code/**", "/", "/css/**", "/fonts/**", "/img/**", "/js/**", "/favicon.ico"};
     // Temp:  Allow all requests
-    private static final String[] permitAll = {"/**", "/oauth/**", "/verify-code/**", "/", "/css/**", "/fonts/**", "/img/**", "/js/**", "/favicon.ico"};
+    private static final String[] permitAll = {"/test/**", "/oauth/**", "/verify-code/**", "/", "/css/**", "/fonts/**", "/img/**", "/js/**", "/favicon.ico"};
 
     private final CustomUserDetailsService customUserDetailsService;
 
@@ -47,7 +47,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers(permitAll).permitAll()
-                //.antMatchers("/**").authenticated()
+                .antMatchers("/**").authenticated()
                 .and()
                 .cors()
                 .and().formLogin().disable();
