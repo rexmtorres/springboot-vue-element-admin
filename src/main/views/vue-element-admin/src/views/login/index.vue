@@ -169,7 +169,7 @@ export default {
               this.loading = false
             })
             .catch(() => {
-              this.$message.error('用户名或密码不正确!')
+              this.$message.error('The username or password is incorrect!')
               this.loading = false
             })
         } else {

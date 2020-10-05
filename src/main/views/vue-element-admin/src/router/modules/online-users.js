@@ -10,7 +10,7 @@ const onlineUserRouter = {
       path: 'index',
       component: () => import('@/views/system/online-users/index'),
       name: 'OnlineUsers',
-      meta: { title: '在线用户', icon: 'people', roles: 'ROLE_ONLINE_USERS' }
+      meta: { title: 'Online Users', icon: 'people', roles: 'ROLE_ONLINE_USERS' }
     }
   ]
 }

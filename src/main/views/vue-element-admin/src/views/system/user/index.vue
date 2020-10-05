@@ -57,7 +57,7 @@
           />
         </el-form-item>
         <el-form-item label="Role">
-          <el-select v-model="user.role.id" clearable placeholder="请选择">
+          <el-select v-model="user.role.id" clearable placeholder="Please Choose">
             <el-option
               v-for="item in rolesList"
               :key="item.id"

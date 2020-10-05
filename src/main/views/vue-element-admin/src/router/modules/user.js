@@ -10,7 +10,7 @@ const webRouter = {
       path: 'index',
       component: () => import('@/views/system/user/index'),
       name: 'User',
-      meta: { title: '用户管理', icon: 'peoples', roles: 'ROLE_USER' }
+      meta: { title: 'User Management', icon: 'peoples', roles: 'ROLE_USER' }
     }
   ]
 }

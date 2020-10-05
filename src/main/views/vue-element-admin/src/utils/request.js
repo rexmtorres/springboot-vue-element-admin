@@ -48,7 +48,7 @@ service.interceptors.response.use(
       return res
     } else {
       Message({
-        message: res.message || '操作失败',
+        message: res.message || 'Operation Failed',
         type: 'error',
         duration: 5 * 1000,
         showClose: true
@@ -59,9 +59,9 @@ service.interceptors.response.use(
   error => {
     if (error.response.status === 401) {
       // to re-login
-      MessageBox.confirm('您已退出，可以点击取消停留在此页面，或者重新登录', '确认退出', {
-        confirmButtonText: '重新登陆',
-        cancelButtonText: '取消',
+      MessageBox.confirm('You have logged out.  You can click Cancel to stay on this page, or Re-login to log in again.', 'Confirm Exit', {
+        confirmButtonText: 'Re-login',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         store.dispatch('user/resetToken').then(() => {
@@ -75,7 +75,7 @@ service.interceptors.response.use(
         // 遇到弹窗操作防止页面抖动
         setTimeout(_ => {
           Message({
-            message: error.response.data.message || '操作失败',
+            message: error.response.data.message || 'Operation Failed',
             type: 'error',
             duration: 5 * 1000
           })

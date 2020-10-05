@@ -72,7 +72,7 @@ public class OnlineUsersController {
             List<OnlineUserVo> userListSorted = userList.stream().sorted(Comparator.comparing(OnlineUserVo::getLoginTime).reversed()).collect(Collectors.toList());
             return HttpResultUtils.success(userListSorted);
         } catch (Exception e) {
-            return HttpResultUtils.fail("服务器错误" + e.getMessage());
+            return HttpResultUtils.fail("Server Error" + e.getMessage());
         }
     }
 
@@ -96,9 +96,9 @@ public class OnlineUsersController {
                 }
                 memoryTokenStore.removeAccessToken(oAuth2AccessToken);
             }
-            return HttpResultUtils.success("强制退出失败");
+            return HttpResultUtils.success("Force exit failed");
         } catch (Exception e) {
-            return HttpResultUtils.fail("强制退出失败" + e.getMessage());
+            return HttpResultUtils.fail("Force exit failed" + e.getMessage());
         }
     }
 

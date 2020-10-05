@@ -10,7 +10,7 @@ const permissionRouter = {
       path: 'index',
       component: () => import('@/views/system/permission/index'),
       name: 'Permission',
-      meta: { title: '权限管理', icon: 'lock', roles: 'ROLE_PERMISSION' }
+      meta: { title: 'Authority Management', icon: 'lock', roles: 'ROLE_PERMISSION' }
     }
   ]
 }

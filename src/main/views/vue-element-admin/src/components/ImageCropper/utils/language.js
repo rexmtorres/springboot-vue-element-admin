@@ -7,7 +7,7 @@ export default {
     fail: '图片上传失败',
     preview: '头像预览',
     btn: {
-      off: '取消',
+      off: 'Cancel',
       close: '关闭',
       back: '上一步',
       save: '保存'
@@ -26,7 +26,7 @@ export default {
     fail: '圖片上傳失敗',
     preview: '頭像預覽',
     btn: {
-      off: '取消',
+      off: 'Cancel',
       close: '關閉',
       back: '上一步',
       save: '保存'

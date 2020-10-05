@@ -59,13 +59,13 @@ export default {
     },
     // 强制退出
     handleForceLogout(row) {
-      this.$confirm('是否确认该操作？', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
+      this.$confirm('Do you want to confirm the operation?', 'Prompt', {
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel',
         type: 'warning'
       }).then(() => {
         forceLogout(row.loginName).then(() => {
-          this.$confirm('操作成功', '提示', {
+          this.$confirm('Successful Operation', 'Prompt', {
             showClose: false,
             showCancelButton: false,
             closeOnClickModal: false,

@@ -10,7 +10,7 @@ const webRouter = {
       path: 'index',
       component: () => import('@/views/web/index'),
       name: 'Web',
-      meta: { title: '网站管理', icon: 'international', roles: 'ROLE_WEB' }
+      meta: { title: 'Website Management', icon: 'international', roles: 'ROLE_WEB' }
     }
   ]
 }

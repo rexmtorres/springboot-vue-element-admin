@@ -9,22 +9,22 @@ package com.dcssn.oauth2.common.constants;
 public interface Security {
 
     /**
-     * 网站管理
+     * Website Management
      */
     String WEB = "ROLE_WEB";
 
     /**
-     * 用户管理
+     * User Management
      */
     String USER = "ROLE_USER";
 
     /**
-     * 权限管理
+     * Authority Management
      */
     String PERMISSION = "ROLE_PERMISSION";
 
     /**
-     * 在线用户
+     * Online Users
      */
     String ONLINE_USERS = "ROLE_ONLINE_USERS";
 

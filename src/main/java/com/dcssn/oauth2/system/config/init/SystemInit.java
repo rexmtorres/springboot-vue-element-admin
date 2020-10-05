@@ -43,34 +43,34 @@ public class SystemInit implements CommandLineRunner {
             menu.setLevel(1);
             menu.setSequence(1);
             menu.setCode("WEB");
-            menu.setTitle("网站管理");
+            menu.setTitle("Website Management");
             menuRepository.save(menu);
 
             Menu menu3 = new Menu();
             menu3.setLevel(1);
             menu3.setSequence(2);
             menu3.setCode("USER");
-            menu3.setTitle("用户管理");
+            menu3.setTitle("User Management");
             menuRepository.save(menu3);
 
             Menu menu2 = new Menu();
             menu2.setLevel(1);
             menu2.setSequence(3);
             menu2.setCode("PERMISSION");
-            menu2.setTitle("权限管理");
+            menu2.setTitle("Authority Management");
             menuRepository.save(menu2);
 
             Menu menu4 = new Menu();
             menu4.setLevel(1);
             menu4.setSequence(5);
             menu4.setCode("ONLINE_USERS");
-            menu4.setTitle("在线用户");
+            menu4.setTitle("Online Users");
             menuRepository.save(menu4);
 
             Role role = new Role();
-            role.setName("管理员");
+            role.setName("Administrator");
             role.setCode("admin");
-            role.setDescription("超级管理员");
+            role.setDescription("Super Administrator");
             roleRepository.save(role);
 
 
